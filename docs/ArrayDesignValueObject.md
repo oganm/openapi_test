@@ -1,0 +1,45 @@
+# openapi::ArrayDesignValueObject
+
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **integer** |  | [optional] 
+**lastUpdated** | **character** |  | [optional] 
+**troubled** | **character** |  | [optional] 
+**lastTroubledEvent** | [**AuditEventValueObject**](AuditEventValueObject.md) |  | [optional] 
+**needsAttention** | **character** |  | [optional] 
+**lastNeedsAttentionEvent** | [**AuditEventValueObject**](AuditEventValueObject.md) |  | [optional] 
+**curationNote** | **character** |  | [optional] 
+**lastNoteUpdateEvent** | [**AuditEventValueObject**](AuditEventValueObject.md) |  | [optional] 
+**blackListed** | **character** |  | [optional] 
+**color** | **character** |  | [optional] 
+**dateCached** | **character** |  | [optional] 
+**description** | **character** |  | [optional] 
+**designElementCount** | **integer** |  | [optional] 
+**expressionExperimentCount** | **integer** |  | [optional] 
+**hasBlatAssociations** | **character** |  | [optional] 
+**hasGeneAssociations** | **character** |  | [optional] 
+**hasSequenceAssociations** | **character** |  | [optional] 
+**isAffymetrixAltCdf** | **character** |  | [optional] 
+**isMerged** | **character** |  | [optional] 
+**isMergee** | **character** |  | [optional] 
+**isSubsumed** | **character** |  | [optional] 
+**isSubsumer** | **character** |  | [optional] 
+**lastGeneMapping** | **character** |  | [optional] 
+**lastRepeatMask** | **character** |  | [optional] 
+**lastSequenceAnalysis** | **character** |  | [optional] 
+**lastSequenceUpdate** | **character** |  | [optional] 
+**name** | **character** |  | [optional] 
+**numGenes** | **character** |  | [optional] 
+**numProbeAlignments** | **character** |  | [optional] 
+**numProbeSequences** | **character** |  | [optional] 
+**numProbesToGenes** | **character** |  | [optional] 
+**shortName** | **character** |  | [optional] 
+**switchedExpressionExperimentCount** | **integer** |  | [optional] 
+**taxon** | **character** |  | [optional] 
+**taxonID** | **integer** |  | [optional] 
+**technologyType** | **character** |  | [optional] 
+**troubleDetails** | **character** |  | [optional] 
+
+
