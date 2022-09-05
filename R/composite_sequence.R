@@ -88,7 +88,6 @@ CompositeSequence <- R6::R6Class(
         CompositeSequenceObject[["arrayDesign"]] <-
           self$`arrayDesign`$toJSON()
       }
-
       CompositeSequenceObject
     },
     #' Deserialize JSON string into an instance of CompositeSequence
@@ -173,7 +172,7 @@ CompositeSequence <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of CompositeSequence
     #'

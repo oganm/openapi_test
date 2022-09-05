@@ -236,7 +236,6 @@ ArrayDesign <- R6::R6Class(
         ArrayDesignObject[["technologyType"]] <-
           self$`technologyType`$toJSON()
       }
-
       ArrayDesignObject
     },
     #' Deserialize JSON string into an instance of ArrayDesign
@@ -476,7 +475,7 @@ ArrayDesign <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ArrayDesign
     #'

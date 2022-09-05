@@ -44,7 +44,6 @@ AuditAction <- R6::R6Class(
         AuditActionObject[["value"]] <-
           self$`value`
       }
-
       AuditActionObject
     },
     #' Deserialize JSON string into an instance of AuditAction
@@ -81,7 +80,7 @@ AuditAction <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of AuditAction
     #'

@@ -1785,10 +1785,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetApiInfo`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -1888,10 +1887,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetAnnotations`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -1991,10 +1989,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetDesign`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2125,10 +2122,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetDifferentialExpression`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2247,10 +2243,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetDifferentialExpressionAnalyses`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2348,10 +2343,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetDifferentialExpressionAnalysesResultSets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2445,10 +2439,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetExpression`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2569,10 +2562,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetExpressionForGenes`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2698,10 +2690,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetExpressionPca`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2801,10 +2792,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetPlatforms`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -2904,10 +2894,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetRawExpression`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3007,10 +2996,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetSamples`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3110,10 +3098,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetSvd`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3234,10 +3221,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/datasets"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3369,10 +3355,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetDatasetsByIds`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3493,10 +3478,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGeneGeneCoexpression`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3596,10 +3580,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGeneGoTerms`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3699,10 +3682,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGeneLocations`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3813,10 +3795,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGeneLocationsInTaxon`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -3935,10 +3916,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGeneProbes`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4038,10 +4018,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetGenes`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4141,10 +4120,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformAnnotations`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4263,10 +4241,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformDatasets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4396,10 +4373,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformElement`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4529,10 +4505,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformElementGenes`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4651,10 +4626,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformElements`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4775,10 +4749,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/platforms"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatforms`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -4910,10 +4883,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetPlatformsByIds`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5013,10 +4985,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetResultSet`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5116,10 +5087,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetResultSetAsTsv`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5250,10 +5220,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/resultSets"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetResultSets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5342,10 +5311,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/taxa"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetTaxa`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5445,10 +5413,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetTaxaByIds`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5580,10 +5547,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetTaxonDatasets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5694,10 +5660,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetTaxonGenes`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5823,10 +5788,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `GetTaxonGenesOverlappingChromosome`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -5946,10 +5910,9 @@ DefaultApi <- R6::R6Class(
 
       local_var_url_path <- "/search"
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `Search`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -6049,10 +6012,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `SearchAnnotations`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -6184,10 +6146,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `SearchDatasets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header
@@ -6330,10 +6291,9 @@ DefaultApi <- R6::R6Class(
       }
 
       # HTTP basic auth
-      if (is.null(self$api_client$username) || is.null(self$api_client$password)) {
-        stop("username, password in `api_client` must be set for authentication in the endpoint `SearchTaxonDatasets`.")
+      if (!is.null(self$api_client$username) || !is.null(self$api_client$password)) {
+        header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       }
-      header_params["Authorization"] <- paste("Basic", base64enc::base64encode(charToRaw(paste(self$api_client$username, self$api_client$password, sep = ":"))))
       # API key authentication
 
       # The Accept request HTTP header

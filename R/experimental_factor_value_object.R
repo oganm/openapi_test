@@ -133,7 +133,6 @@ ExperimentalFactorValueObject <- R6::R6Class(
         ExperimentalFactorValueObjectObject[["values"]] <-
           lapply(self$`values`, function(x) x$toJSON())
       }
-
       ExperimentalFactorValueObjectObject
     },
     #' Deserialize JSON string into an instance of ExperimentalFactorValueObject
@@ -258,7 +257,7 @@ ExperimentalFactorValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ExperimentalFactorValueObject
     #'

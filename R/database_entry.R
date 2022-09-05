@@ -88,7 +88,6 @@ DatabaseEntry <- R6::R6Class(
         DatabaseEntryObject[["uri"]] <-
           self$`uri`
       }
-
       DatabaseEntryObject
     },
     #' Deserialize JSON string into an instance of DatabaseEntry
@@ -171,7 +170,7 @@ DatabaseEntry <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of DatabaseEntry
     #'

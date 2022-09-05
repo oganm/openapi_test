@@ -44,7 +44,6 @@ IdentifiableValueObject <- R6::R6Class(
         IdentifiableValueObjectObject[["id"]] <-
           self$`id`
       }
-
       IdentifiableValueObjectObject
     },
     #' Deserialize JSON string into an instance of IdentifiableValueObject
@@ -81,7 +80,7 @@ IdentifiableValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of IdentifiableValueObject
     #'

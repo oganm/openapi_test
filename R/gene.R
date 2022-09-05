@@ -202,7 +202,6 @@ Gene <- R6::R6Class(
         GeneObject[["phenotypeAssociations"]] <-
           lapply(self$`phenotypeAssociations`, function(x) x$toJSON())
       }
-
       GeneObject
     },
     #' Deserialize JSON string into an instance of Gene
@@ -399,7 +398,7 @@ Gene <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of Gene
     #'

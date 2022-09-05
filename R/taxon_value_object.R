@@ -110,7 +110,6 @@ TaxonValueObject <- R6::R6Class(
         TaxonValueObjectObject[["externalDatabase"]] <-
           self$`externalDatabase`$toJSON()
       }
-
       TaxonValueObjectObject
     },
     #' Deserialize JSON string into an instance of TaxonValueObject
@@ -215,7 +214,7 @@ TaxonValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of TaxonValueObject
     #'

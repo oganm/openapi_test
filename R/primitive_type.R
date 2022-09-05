@@ -44,7 +44,6 @@ PrimitiveType <- R6::R6Class(
         PrimitiveTypeObject[["value"]] <-
           self$`value`
       }
-
       PrimitiveTypeObject
     },
     #' Deserialize JSON string into an instance of PrimitiveType
@@ -81,7 +80,7 @@ PrimitiveType <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PrimitiveType
     #'

@@ -66,7 +66,6 @@ MedicalSubjectHeading <- R6::R6Class(
         MedicalSubjectHeadingObject[["term"]] <-
           self$`term`
       }
-
       MedicalSubjectHeadingObject
     },
     #' Deserialize JSON string into an instance of MedicalSubjectHeading
@@ -125,7 +124,7 @@ MedicalSubjectHeading <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of MedicalSubjectHeading
     #'

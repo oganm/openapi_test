@@ -45,7 +45,6 @@ ResponseDataObjectListDifferentialExpressionAnalysisValueObject <- R6::R6Class(
         ResponseDataObjectListDifferentialExpressionAnalysisValueObjectObject[["data"]] <-
           lapply(self$`data`, function(x) x$toJSON())
       }
-
       ResponseDataObjectListDifferentialExpressionAnalysisValueObjectObject
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectListDifferentialExpressionAnalysisValueObject
@@ -82,7 +81,7 @@ ResponseDataObjectListDifferentialExpressionAnalysisValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectListDifferentialExpressionAnalysisValueObject
     #'

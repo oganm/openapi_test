@@ -213,7 +213,6 @@ DiffExResultSetSummaryValueObject <- R6::R6Class(
         DiffExResultSetSummaryValueObjectObject[["experimentalFactorsByValueObject"]] <-
           lapply(self$`experimentalFactorsByValueObject`, function(x) x$toJSON())
       }
-
       DiffExResultSetSummaryValueObjectObject
     },
     #' Deserialize JSON string into an instance of DiffExResultSetSummaryValueObject
@@ -417,7 +416,7 @@ DiffExResultSetSummaryValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of DiffExResultSetSummaryValueObject
     #'

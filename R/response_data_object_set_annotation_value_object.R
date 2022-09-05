@@ -45,7 +45,6 @@ ResponseDataObjectSetAnnotationValueObject <- R6::R6Class(
         ResponseDataObjectSetAnnotationValueObjectObject[["data"]] <-
           lapply(self$`data`, function(x) x$toJSON())
       }
-
       ResponseDataObjectSetAnnotationValueObjectObject
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectSetAnnotationValueObject
@@ -82,7 +81,7 @@ ResponseDataObjectSetAnnotationValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectSetAnnotationValueObject
     #'

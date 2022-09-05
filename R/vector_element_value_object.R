@@ -56,7 +56,6 @@ VectorElementValueObject <- R6::R6Class(
         VectorElementValueObjectObject[["bioAssayExpressionLevels"]] <-
           self$`bioAssayExpressionLevels`
       }
-
       VectorElementValueObjectObject
     },
     #' Deserialize JSON string into an instance of VectorElementValueObject
@@ -104,7 +103,7 @@ VectorElementValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of VectorElementValueObject
     #'

@@ -110,7 +110,6 @@ PhysicalLocationValueObject <- R6::R6Class(
         PhysicalLocationValueObjectObject[["taxon"]] <-
           self$`taxon`$toJSON()
       }
-
       PhysicalLocationValueObjectObject
     },
     #' Deserialize JSON string into an instance of PhysicalLocationValueObject
@@ -215,7 +214,7 @@ PhysicalLocationValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PhysicalLocationValueObject
     #'

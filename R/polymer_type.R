@@ -44,7 +44,6 @@ PolymerType <- R6::R6Class(
         PolymerTypeObject[["value"]] <-
           self$`value`
       }
-
       PolymerTypeObject
     },
     #' Deserialize JSON string into an instance of PolymerType
@@ -81,7 +80,7 @@ PolymerType <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PolymerType
     #'

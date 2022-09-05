@@ -66,7 +66,6 @@ DatabaseEntryValueObject <- R6::R6Class(
         DatabaseEntryValueObjectObject[["externalDatabase"]] <-
           self$`externalDatabase`$toJSON()
       }
-
       DatabaseEntryValueObjectObject
     },
     #' Deserialize JSON string into an instance of DatabaseEntryValueObject
@@ -127,7 +126,7 @@ DatabaseEntryValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of DatabaseEntryValueObject
     #'

@@ -99,7 +99,6 @@ PhysicalLocation <- R6::R6Class(
         PhysicalLocationObject[["bin"]] <-
           self$`bin`
       }
-
       PhysicalLocationObject
     },
     #' Deserialize JSON string into an instance of PhysicalLocation
@@ -193,7 +192,7 @@ PhysicalLocation <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PhysicalLocation
     #'

@@ -44,7 +44,6 @@ AuditEventType <- R6::R6Class(
         AuditEventTypeObject[["id"]] <-
           self$`id`
       }
-
       AuditEventTypeObject
     },
     #' Deserialize JSON string into an instance of AuditEventType
@@ -81,7 +80,7 @@ AuditEventType <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of AuditEventType
     #'

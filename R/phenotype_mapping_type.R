@@ -55,7 +55,6 @@ PhenotypeMappingType <- R6::R6Class(
         PhenotypeMappingTypeObject[["mutable"]] <-
           self$`mutable`
       }
-
       PhenotypeMappingTypeObject
     },
     #' Deserialize JSON string into an instance of PhenotypeMappingType
@@ -103,7 +102,7 @@ PhenotypeMappingType <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PhenotypeMappingType
     #'

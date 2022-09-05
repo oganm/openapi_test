@@ -67,7 +67,6 @@ WellComposedErrorBody <- R6::R6Class(
         WellComposedErrorBodyObject[["errors"]] <-
           self$`errors`
       }
-
       WellComposedErrorBodyObject
     },
     #' Deserialize JSON string into an instance of WellComposedErrorBody
@@ -126,7 +125,7 @@ WellComposedErrorBody <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of WellComposedErrorBody
     #'

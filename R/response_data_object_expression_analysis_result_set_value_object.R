@@ -44,7 +44,6 @@ ResponseDataObjectExpressionAnalysisResultSetValueObject <- R6::R6Class(
         ResponseDataObjectExpressionAnalysisResultSetValueObjectObject[["data"]] <-
           self$`data`$toJSON()
       }
-
       ResponseDataObjectExpressionAnalysisResultSetValueObjectObject
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectExpressionAnalysisResultSetValueObject
@@ -83,7 +82,7 @@ ResponseDataObjectExpressionAnalysisResultSetValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ResponseDataObjectExpressionAnalysisResultSetValueObject
     #'

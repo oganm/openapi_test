@@ -89,7 +89,6 @@ PaginatedResponseDataObjectArrayDesignValueObject <- R6::R6Class(
         PaginatedResponseDataObjectArrayDesignValueObjectObject[["totalElements"]] <-
           self$`totalElements`
       }
-
       PaginatedResponseDataObjectArrayDesignValueObjectObject
     },
     #' Deserialize JSON string into an instance of PaginatedResponseDataObjectArrayDesignValueObject
@@ -172,7 +171,7 @@ PaginatedResponseDataObjectArrayDesignValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of PaginatedResponseDataObjectArrayDesignValueObject
     #'

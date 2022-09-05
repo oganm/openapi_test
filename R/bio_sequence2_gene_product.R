@@ -132,7 +132,6 @@ BioSequence2GeneProduct <- R6::R6Class(
         BioSequence2GeneProductObject[["geneProduct"]] <-
           self$`geneProduct`$toJSON()
       }
-
       BioSequence2GeneProductObject
     },
     #' Deserialize JSON string into an instance of BioSequence2GeneProduct
@@ -265,7 +264,7 @@ BioSequence2GeneProduct <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of BioSequence2GeneProduct
     #'

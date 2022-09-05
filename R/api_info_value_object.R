@@ -66,7 +66,6 @@ ApiInfoValueObject <- R6::R6Class(
         ApiInfoValueObjectObject[["docs"]] <-
           self$`docs`
       }
-
       ApiInfoValueObjectObject
     },
     #' Deserialize JSON string into an instance of ApiInfoValueObject
@@ -125,7 +124,7 @@ ApiInfoValueObject <- R6::R6Class(
         }
       )
       jsoncontent <- paste(jsoncontent, collapse = ",")
-      as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
+      json_string <- as.character(jsonlite::minify(paste("{", jsoncontent, "}", sep = "")))
     },
     #' Deserialize JSON string into an instance of ApiInfoValueObject
     #'

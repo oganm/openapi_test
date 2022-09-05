@@ -2,10 +2,10 @@
 .github/workflows/r-client.yaml
 .gitignore
 .lintr
-.openapi-generator-ignore
 .travis.yml
 DESCRIPTION
 NAMESPACE
+README.md
 R/alternate_name.R
 R/analysis.R
 R/annotation_search_result_value_object.R
@@ -129,7 +129,6 @@ R/three_prime_distance_method.R
 R/user.R
 R/vector_element_value_object.R
 R/well_composed_error_body.R
-README.md
 docs/AlternateName.md
 docs/Analysis.md
 docs/AnnotationSearchResultValueObject.md
